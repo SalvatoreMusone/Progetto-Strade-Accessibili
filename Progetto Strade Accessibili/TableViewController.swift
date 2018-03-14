@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreLocation
+class TableViewController: UITableViewController, CLLocationManagerDelegate {
 
-class TableViewController: UITableViewController {
-
+    @IBOutlet weak var labelCittà: UILabel!
+    let locationManag = LocationManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let geoCoder = CLGeocoder()
+        geoCoder.reverseGeocodeLocation(locationManag.location!) { (placemarks, error) in
+            
+            self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,7 +42,21 @@ class TableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
+    
+    func handlerIndirizzo(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+        
+        if let error = error {
+            
+            labelCittà.text = "Indirizzo non disponibile"
+            
+        } else {
+            if let placemarks = placemarks, let placemark = placemarks.first {
+                labelCittà.text = "Location:  \(placemark.locality!), \(placemark.country!)"
+            } else {
+                labelCittà.text = "Indirizzo non disponibile "
+            }
+        }
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
