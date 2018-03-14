@@ -14,6 +14,7 @@
 		BE0B0A80205922BF006976A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0B0A7E205922BF006976A2 /* LaunchScreen.storyboard */; };
 		BE39244920595BDE000E3B60 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39244820595BDE000E3B60 /* TableViewCell.swift */; };
 		BE39244B20595BF0000E3B60 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39244A20595BF0000E3B60 /* TableViewController.swift */; };
+		BE39244D20595D26000E3B60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39244C20595D26000E3B60 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BE0B0A81205922BF006976A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE39244820595BDE000E3B60 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		BE39244A20595BF0000E3B60 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BE39244C20595D26000E3B60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				BE0B0A7C205922BF006976A2 /* Assets.xcassets */,
 				BE0B0A7E205922BF006976A2 /* LaunchScreen.storyboard */,
 				BE0B0A81205922BF006976A2 /* Info.plist */,
+				BE39244C20595D26000E3B60 /* Model.swift */,
 				BE39244820595BDE000E3B60 /* TableViewCell.swift */,
 				BE39244A20595BF0000E3B60 /* TableViewController.swift */,
 			);
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE39244D20595D26000E3B60 /* Model.swift in Sources */,
 				BE39244920595BDE000E3B60 /* TableViewCell.swift in Sources */,
 				BE0B0A78205922BF006976A2 /* ViewController.swift in Sources */,
 				BE0B0A76205922BF006976A2 /* AppDelegate.swift in Sources */,
