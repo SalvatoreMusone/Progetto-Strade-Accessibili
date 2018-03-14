@@ -38,10 +38,10 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return routes
-    }
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return routes
+//    }
     
     func handlerIndirizzo(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         

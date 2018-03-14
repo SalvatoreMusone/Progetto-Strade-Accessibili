@@ -7,12 +7,32 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
+import CoreLocation
+import MapKit
+class ViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate{
+    let locationManag = LocationManager.shared
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 200, 200)
+        mappa.setRegion(coordinateRegion, animated: true)
+        let location = userLocation
+        
+        print(location.coordinate)
+        
+        
+        
+        
+        
+        
+    }
+    @IBOutlet weak var mappa: MKMapView!
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        mappa.delegate = self
+        mappa.mapType = MKMapType.hybrid
+        mappa.showsUserLocation = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 
