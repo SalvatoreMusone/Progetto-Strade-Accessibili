@@ -9,12 +9,13 @@
 import UIKit
 import CoreLocation
 
-var posizioneAttuale = "ciao"
+var posizioneAttuale = ""
 class route {
     var tpartenza: String
     var tarrivo: String
     var minuti: Int
     var chilometri: Double
+    
     
     init(da: String, a: String, minuti: Int, chilometri: Double ) {
         tpartenza = da

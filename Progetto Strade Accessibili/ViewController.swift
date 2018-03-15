@@ -15,9 +15,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let geoCoder = CLGeocoder()
-        geoCoder.reverseGeocodeLocation(locationManag.location!){(placemarks, error) in
+        if let loc = locationManag.location{
+        geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
             self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
-        }
+            } }
     }
 
     override func didReceiveMemoryWarning() {
