@@ -2,23 +2,17 @@
 //  TableViewController.swift
 //  Progetto Strade Accessibili
 //
-//  Created by Salvatore Musone on 14/03/2018.
+//  Created by Salvatore Musone on 15/03/2018.
 //  Copyright © 2018 Salvatore Musone. All rights reserved.
 //
 
 import UIKit
-import CoreLocation
-class TableViewController: UITableViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var labelCittà: UILabel!
-    let locationManag = LocationManager.shared
+class TableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let geoCoder = CLGeocoder()
-        geoCoder.reverseGeocodeLocation(locationManag.location!) { (placemarks, error) in
-            
-            self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
-        }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -33,40 +27,25 @@ class TableViewController: UITableViewController, CLLocationManagerDelegate {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+   // override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+   //     return 1
+   // }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return routes.count
     }
 
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return routes
-//    }
-    
-    func handlerIndirizzo(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
-        
-        if let error = error {
-            
-            labelCittà.text = "Indirizzo non disponibile"
-            
-        } else {
-            if let placemarks = placemarks, let placemark = placemarks.first {
-                labelCittà.text = "Location:  \(placemark.locality!), \(placemark.country!)"
-            } else {
-                labelCittà.text = "Indirizzo non disponibile "
-            }
-        }
-    }
-    /*
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cella", for: indexPath) as! TableViewCell
+        let i = indexPath.row
+        cell.Arrivo.text = "Arrivo: \(routes[i].tarrivo)"
+        cell.Partenza.text = "Da: \(routes[i].tpartenza)"
+        print("prova \(i)")
         return cell
     }
-    */
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

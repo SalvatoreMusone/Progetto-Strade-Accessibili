@@ -2,14 +2,15 @@
 //  TableViewCell.swift
 //  Progetto Strade Accessibili
 //
-//  Created by Salvatore Musone on 14/03/2018.
+//  Created by Salvatore Musone on 15/03/2018.
 //  Copyright © 2018 Salvatore Musone. All rights reserved.
 //
 
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    @IBOutlet var Arrivo: UILabel!
+    @IBOutlet var Partenza: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

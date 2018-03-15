@@ -7,16 +7,38 @@
 //
 
 import UIKit
-class routes {
-    var partenza: String
-    var arrivo: String
+import CoreLocation
+
+var posizioneAttuale = "ciao"
+class route {
+    var tpartenza: String
+    var tarrivo: String
     var minuti: Int
-    var chilometri: Int
+    var chilometri: Double
     
-    init(da: String, a: String, minuti: Int, chilometri: Int ) {
-        partenza = da
-        arrivo = a
+    init(da: String, a: String, minuti: Int, chilometri: Double ) {
+        tpartenza = da
+        tarrivo = a
         self.minuti = minuti
         self.chilometri = chilometri
+        
     }
 }
+
+var routes = [
+    route(da: "Casa", a: "Università", minuti: 20, chilometri: 2.7),
+    route(da: "Annunziata", a: "Aulario", minuti: 15, chilometri: 10.2)
+]
+
+//var cpartenza: CLLocationCoordinate2D
+//var cArrivo: CLLocationCoordinate2D
+
+
+//cpartenza = coordinate_partenza
+//cArrivo = coordinate_arrivo
+
+//, coordinate_partenza:CLLocationCoordinate2D, coordinate_arrivo:CLLocationCoordinate2D
+
+//, coordinate_partenza: CLLocationCoordinate2D(latitude: 40.98983, longitude: 14.20000), coordinate_arrivo: CLLocationCoordinate2D(latitude: 40.969696, longitude: 14.80201)
+
+//, coordinate_partenza:CLLocationCoordinate2D(latitude: 49.90000, longitude: 14.1411441), coordinate_arrivo: CLLocationCoordinate2D(latitude: 40.181819, longitude: 10.404040)

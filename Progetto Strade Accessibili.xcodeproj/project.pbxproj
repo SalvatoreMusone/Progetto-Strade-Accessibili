@@ -9,27 +9,29 @@
 /* Begin PBXBuildFile section */
 		6CB3E07320595E8F00221D0A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB3E07220595E8F00221D0A /* LocationManager.swift */; };
 		BE0B0A76205922BF006976A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B0A75205922BF006976A2 /* AppDelegate.swift */; };
-		BE0B0A78205922BF006976A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B0A77205922BF006976A2 /* ViewController.swift */; };
 		BE0B0A7B205922BF006976A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0B0A79205922BF006976A2 /* Main.storyboard */; };
 		BE0B0A7D205922BF006976A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE0B0A7C205922BF006976A2 /* Assets.xcassets */; };
 		BE0B0A80205922BF006976A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0B0A7E205922BF006976A2 /* LaunchScreen.storyboard */; };
-		BE39244920595BDE000E3B60 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39244820595BDE000E3B60 /* TableViewCell.swift */; };
-		BE39244B20595BF0000E3B60 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39244A20595BF0000E3B60 /* TableViewController.swift */; };
 		BE39244D20595D26000E3B60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39244C20595D26000E3B60 /* Model.swift */; };
+		BE608E03205A917A00311147 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE608E02205A917A00311147 /* MapViewController.swift */; };
+		BE608E05205A969C00311147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE608E04205A969C00311147 /* ViewController.swift */; };
+		BE608E07205A96B000311147 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE608E06205A96B000311147 /* TableViewController.swift */; };
+		BE608E09205A96BE00311147 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE608E08205A96BE00311147 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6CB3E07220595E8F00221D0A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BE0B0A72205922BF006976A2 /* Progetto Strade Accessibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Progetto Strade Accessibili.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0B0A75205922BF006976A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE0B0A77205922BF006976A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BE0B0A7A205922BF006976A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE0B0A7C205922BF006976A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE0B0A7F205922BF006976A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE0B0A81205922BF006976A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE39244820595BDE000E3B60 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		BE39244A20595BF0000E3B60 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		BE39244C20595D26000E3B60 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BE608E02205A917A00311147 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BE608E04205A969C00311147 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE608E06205A96B000311147 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		BE608E08205A96BE00311147 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +64,17 @@
 		BE0B0A74205922BF006976A2 /* Progetto Strade Accessibili */ = {
 			isa = PBXGroup;
 			children = (
+				BE608E02205A917A00311147 /* MapViewController.swift */,
 				BE0B0A75205922BF006976A2 /* AppDelegate.swift */,
-				BE0B0A77205922BF006976A2 /* ViewController.swift */,
 				BE0B0A79205922BF006976A2 /* Main.storyboard */,
+				BE608E04205A969C00311147 /* ViewController.swift */,
+				BE608E06205A96B000311147 /* TableViewController.swift */,
+				BE608E08205A96BE00311147 /* TableViewCell.swift */,
 				6CB3E07220595E8F00221D0A /* LocationManager.swift */,
 				BE0B0A7C205922BF006976A2 /* Assets.xcassets */,
 				BE0B0A7E205922BF006976A2 /* LaunchScreen.storyboard */,
 				BE0B0A81205922BF006976A2 /* Info.plist */,
 				BE39244C20595D26000E3B60 /* Model.swift */,
-				BE39244820595BDE000E3B60 /* TableViewCell.swift */,
-				BE39244A20595BF0000E3B60 /* TableViewController.swift */,
 			);
 			path = "Progetto Strade Accessibili";
 			sourceTree = "<group>";
@@ -148,12 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE608E05205A969C00311147 /* ViewController.swift in Sources */,
+				BE608E07205A96B000311147 /* TableViewController.swift in Sources */,
 				BE39244D20595D26000E3B60 /* Model.swift in Sources */,
-				BE39244920595BDE000E3B60 /* TableViewCell.swift in Sources */,
-				BE0B0A78205922BF006976A2 /* ViewController.swift in Sources */,
 				6CB3E07320595E8F00221D0A /* LocationManager.swift in Sources */,
 				BE0B0A76205922BF006976A2 /* AppDelegate.swift in Sources */,
-				BE39244B20595BF0000E3B60 /* TableViewController.swift in Sources */,
+				BE608E09205A96BE00311147 /* TableViewCell.swift in Sources */,
+				BE608E03205A917A00311147 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
