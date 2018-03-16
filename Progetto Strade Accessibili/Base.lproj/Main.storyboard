@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Homepage-->
         <scene sceneID="xJv-ob-v8N">
             <objects>
-                <viewController id="5Xr-aG-4ni" sceneMemberID="viewController">
+                <viewController id="5Xr-aG-4ni" customClass="Homepage" customModule="Progetto_Strade_Accessibili" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3qc-zp-sVb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,13 +32,6 @@
                                     <segue destination="ao0-bF-2cE" kind="show" id="HYJ-kT-0f4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to: ....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Ko-AS0">
-                                <rect key="frame" x="98" y="92" width="179" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zus-9p-AS8">
                                 <rect key="frame" x="136" y="317" width="103" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,11 +40,21 @@
                                     <segue destination="CAX-Nb-4cT" kind="show" id="hnS-Mj-YZj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to: ....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Ko-AS0">
+                                <rect key="frame" x="16" y="97" width="343" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ehx-Nt-TNZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="P4f-NB-szg"/>
+                    <connections>
+                        <outlet property="welcome" destination="pIi-Ko-AS0" id="bbu-pn-DQg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShK-OJ-Msx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,6 +86,9 @@
                                 <rect key="frame" x="313" y="78" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New"/>
+                                <connections>
+                                    <segue destination="CAX-Nb-4cT" kind="show" id="Mmh-le-brB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,4 +214,7 @@
     <resources>
         <image name="iconaMappa" width="178" height="169"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hnS-Mj-YZj"/>
+    </inferredMetricsTieBreakers>
 </document>
