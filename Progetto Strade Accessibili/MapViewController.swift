@@ -11,13 +11,11 @@ import UIKit
 import UIKit
 import CoreLocation
 import MapKit
+var locatio:[CLLocationCoordinate2D] = []
+var aPolyline = MKPolyline()
 class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate{
     let locationManag = LocationManager.shared
   
-    
-   
-   var locatio:[CLLocationCoordinate2D] = []
-
     
 
     func locationManager(_ manager: CLLocationManager,
@@ -40,7 +38,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     func createPolyline(){
 //        let locations = [CLLocationCoordinate2D(latitude: 37.3321387, longitude: -122.0310386),CLLocationCoordinate2D(latitude: 37.3320003, longitude: -122.0319299)]
         //locations.append((locationManag.location?.coordinate)!)
-        let aPolyline = MKPolyline(coordinates: locatio, count: locatio.count)
+        aPolyline = MKPolyline(coordinates: locatio, count: locatio.count)
         mappa.add(aPolyline)
     }
     
@@ -70,12 +68,15 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        locatio.removeAll()
+        mappa.remove(aPolyline)
+        
         locationManag.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         locationManag.delegate = self
        
         locationManag.startUpdatingLocation()
         locationManag.startUpdatingHeading()
-        
+   
 
         mappa.delegate = self
         mappa.mapType = MKMapType.hybrid
@@ -89,6 +90,10 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    @IBAction func stop(_ sender: Any) {
+        locationManag.stopUpdatingLocation()
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
