@@ -9,26 +9,26 @@
 import UIKit
 import CoreLocation
 
-var posizioneAttuale = ""
+
 class route {
     var tpartenza: String
     var tarrivo: String
     var minuti: Int
     var chilometri: Double
+    var locality:String
     
-    
-    init(da: String, a: String, minuti: Int, chilometri: Double ) {
+    init(da: String, a: String, minuti: Int, chilometri: Double, loc:String ) {
         tpartenza = da
         tarrivo = a
         self.minuti = minuti
         self.chilometri = chilometri
-        
+        self.locality = loc
     }
 }
 
 var routes = [
-    route(da: "Casa", a: "Università", minuti: 20, chilometri: 2.7),
-    route(da: "Annunziata", a: "Aulario", minuti: 15, chilometri: 10.2)
+    route(da: "Casa", a: "Università", minuti: 20, chilometri: 2.7 , loc: "Aversa"),
+    route(da: "Annunziata", a: "Aulario", minuti: 15, chilometri: 10.2, loc:"Marcianise"),
 ]
 
 //var cpartenza: CLLocationCoordinate2D

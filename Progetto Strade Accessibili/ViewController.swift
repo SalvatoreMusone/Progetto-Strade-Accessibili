@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+//var locality=""
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var lCittà: UILabel!
@@ -19,6 +20,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
             self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
             } }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +48,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             if let placemarks = placemarks, let placemark = placemarks.first {
                 lCittà.text = "Location:  \(placemark.locality!), \(placemark.country!)"
+               // locality = placemark.locality!
+                //print(locality)
             } else {
                 lCittà.text = "Indirizzo non disponibile "
             }

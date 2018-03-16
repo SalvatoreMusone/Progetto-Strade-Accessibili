@@ -7,12 +7,25 @@
 //
 
 import UIKit
-
+import CoreLocation
+var localitycell=""
 class TableViewController: UITableViewController {
+    let geoCoder = CLGeocoder()
+    func geocode(){
 
+        let locationManag = LocationManager.shared
+        var posizioneAttuale = locationManag.location
+
+    if let loc = locationManag.location{
+        geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
+            self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
+        } }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,10 +54,37 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cella", for: indexPath) as! TableViewCell
         let i = indexPath.row
+        
+    
+        
+        
+        geocode()
+//        if locality == routes[i].locality{
+//            //print(locality)
+
         cell.Arrivo.text = "Arrivo: \(routes[i].tarrivo)"
         cell.Partenza.text = "Da: \(routes[i].tpartenza)"
-        print("prova \(i)")
+        
+       // print("prova \(i)")
         return cell
+    
+    }
+    func handlerIndirizzo(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
+        
+        if let error = error {
+            
+            localitycell = "Indirizzo non disponibile"
+            
+        } else {
+            if let placemarks = placemarks, let placemark = placemarks.first {
+                localitycell = "Location:  \(placemark.locality!), \(placemark.country!)"
+                localitycell = placemark.locality!
+                print(localitycell)
+
+            } else {
+                localitycell = "Indirizzo non disponibile "
+            }
+        }
     }
     /*
     // Override to support conditional editing of the table view.
