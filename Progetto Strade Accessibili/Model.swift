@@ -9,6 +9,13 @@
 import UIKit
 import CoreLocation
 
+//struct Itinerari{
+//    var itinerari: Array<Array<CLLocationCoordinate2D>> = []
+//
+//
+//
+//}
+
 
 class route {
     var tpartenza: String
@@ -23,6 +30,10 @@ class route {
         self.minuti = minuti
         self.chilometri = chilometri
         self.locality = loc
+        
+//         var it = Itinerari()
+//
+//        it.itinerari.append(locatio)
     }
 }
 
@@ -30,6 +41,9 @@ var routes = [
     route(da: "Casa", a: "Università", minuti: 20, chilometri: 2.7 , loc: "Aversa"),
     route(da: "Annunziata", a: "Aulario", minuti: 15, chilometri: 10.2, loc:"Marcianise"),
 ]
+//var listaItinerari = [String:Itinerari]()
+//listaItinerari["Aversa"]=Itinerari(itinerari: locatio)
+
 
 //var cpartenza: CLLocationCoordinate2D
 //var cArrivo: CLLocationCoordinate2D
