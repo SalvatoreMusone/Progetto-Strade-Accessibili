@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-g5-mle">
-                                <rect key="frame" x="20" y="94" width="335" height="513"/>
+                                <rect key="frame" x="20" y="50" width="335" height="557"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to: ....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Ko-AS0">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="28"/>
@@ -35,17 +35,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tFy-IY-lvE">
-                                        <rect key="frame" x="0.0" y="128" width="335" height="385"/>
+                                        <rect key="frame" x="0.0" y="128" width="335" height="429"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ez-sd-MEj">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="185"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
                                                 <state key="normal" image="listaicon"/>
                                                 <connections>
                                                     <segue destination="ao0-bF-2cE" kind="show" id="HYJ-kT-0f4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxC-Z3-c8a">
-                                                <rect key="frame" x="0.0" y="200" width="335" height="185"/>
+                                                <rect key="frame" x="0.0" y="222" width="335" height="207"/>
                                                 <state key="normal" image="go"/>
                                                 <connections>
                                                     <segue destination="CAX-Nb-4cT" kind="show" id="0rf-8M-n7g"/>
@@ -152,7 +152,8 @@
                                         <rect key="frame" x="0.0" y="583" width="360" height="0.0"/>
                                         <state key="normal" title="Stop"/>
                                         <connections>
-                                            <segue destination="Xnb-4Q-CnS" kind="show" id="lAT-gf-NRN"/>
+                                            <action selector="stop:" destination="CAX-Nb-4cT" eventType="touchUpInside" id="qC7-Gc-Mpo"/>
+                                            <segue destination="5Xr-aG-4ni" kind="show" id="Wdz-wx-IBG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -215,6 +216,7 @@
                                 <connections>
                                     <outlet property="Arrivo" destination="hCn-8R-smW" id="Sa7-3K-ObH"/>
                                     <outlet property="Partenza" destination="dYi-R6-lJK" id="4My-VV-nft"/>
+                                    <segue destination="4JY-HZ-Bm7" kind="show" id="y0j-QG-027"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -227,6 +229,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhU-G3-rxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="406" y="1728"/>
+        </scene>
+        <!--View Itinerario-->
+        <scene sceneID="6Nf-ag-jel">
+            <objects>
+                <viewController id="4JY-HZ-Bm7" customClass="ViewItinerario" customModule="Progetto_Strade_Accessibili" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l4H-J8-QlJ">
+                        <rect key="frame" x="0.0" y="0.0" width="339" height="531"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-he-v30">
+                                <rect key="frame" x="0.0" y="42" width="339" height="442"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W3t-uR-LkK" firstAttribute="bottom" secondItem="PYo-he-v30" secondAttribute="bottom" constant="47" id="S6H-aX-a6p"/>
+                            <constraint firstItem="PYo-he-v30" firstAttribute="leading" secondItem="l4H-J8-QlJ" secondAttribute="leading" id="lRL-KC-tkP"/>
+                            <constraint firstItem="PYo-he-v30" firstAttribute="top" secondItem="W3t-uR-LkK" secondAttribute="top" constant="22" id="lXj-ZC-zCt"/>
+                            <constraint firstAttribute="trailing" secondItem="PYo-he-v30" secondAttribute="trailing" id="nQ0-P2-Opd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W3t-uR-LkK"/>
+                    </view>
+                    <connections>
+                        <outlet property="mappaItinerario" destination="PYo-he-v30" id="eVp-83-PKg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcJ-A1-6Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224.8" y="1788.7556221889056"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0de-31-NNG">
@@ -253,6 +284,7 @@
         <image name="listaicon" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mmh-le-brB"/>
+        <segue reference="0rf-8M-n7g"/>
+        <segue reference="Wdz-wx-IBG"/>
     </inferredMetricsTieBreakers>
 </document>
