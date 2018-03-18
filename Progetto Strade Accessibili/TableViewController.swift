@@ -79,7 +79,7 @@ class TableViewController: UITableViewController {
             if let placemarks = placemarks, let placemark = placemarks.first {
                 localitycell = "Location:  \(placemark.locality!), \(placemark.country!)"
                 localitycell = placemark.locality!
-                print(localitycell)
+                //print(localitycell)
 
             } else {
                 localitycell = "Indirizzo non disponibile "
@@ -121,14 +121,17 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+ 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let i = tableView.indexPathForSelectedRow!.row
+        itinerarioSelezionato = routes[i]
     }
-    */
+   
 
 }

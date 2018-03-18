@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C9F1E11205D9C69003CB243 /* ViewItinerario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9F1E10205D9C69003CB243 /* ViewItinerario.swift */; };
 		6CB3E07320595E8F00221D0A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB3E07220595E8F00221D0A /* LocationManager.swift */; };
 		BE0B0A76205922BF006976A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B0A75205922BF006976A2 /* AppDelegate.swift */; };
 		BE0B0A7B205922BF006976A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE0B0A79205922BF006976A2 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C9F1E10205D9C69003CB243 /* ViewItinerario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItinerario.swift; sourceTree = "<group>"; };
 		6CB3E07220595E8F00221D0A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		BE0B0A72205922BF006976A2 /* Progetto Strade Accessibili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Progetto Strade Accessibili.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0B0A75205922BF006976A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				BE608E02205A917A00311147 /* MapViewController.swift */,
 				BE0B0A75205922BF006976A2 /* AppDelegate.swift */,
 				BE0B0A79205922BF006976A2 /* Main.storyboard */,
+				6C9F1E10205D9C69003CB243 /* ViewItinerario.swift */,
 				BE28C37B205C02A7008F16E3 /* Homepage.swift */,
 				BE608E04205A969C00311147 /* ViewController.swift */,
 				BE608E06205A96B000311147 /* TableViewController.swift */,
@@ -160,6 +163,7 @@
 				6CB3E07320595E8F00221D0A /* LocationManager.swift in Sources */,
 				BE0B0A76205922BF006976A2 /* AppDelegate.swift in Sources */,
 				BE608E09205A96BE00311147 /* TableViewCell.swift in Sources */,
+				6C9F1E11205D9C69003CB243 /* ViewItinerario.swift in Sources */,
 				BE608E03205A917A00311147 /* MapViewController.swift in Sources */,
 				BE28C37C205C02A7008F16E3 /* Homepage.swift in Sources */,
 			);
@@ -299,10 +303,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ANQCCK3BGZ;
+				DEVELOPMENT_TEAM = A49A4995C7;
 				INFOPLIST_FILE = "Progetto Strade Accessibili/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili27";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,10 +318,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ANQCCK3BGZ;
+				DEVELOPMENT_TEAM = A49A4995C7;
 				INFOPLIST_FILE = "Progetto Strade Accessibili/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili27";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

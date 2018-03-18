@@ -8,7 +8,8 @@
 
 import UIKit
 import CoreLocation
-
+var counts=[String : Int]()
+var listaCaricata = [route]()
 class Homepage: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var welcome: UILabel!
@@ -20,6 +21,44 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
             geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
                 self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
             } }
+        
+       
+//        var mapV = MapViewController()
+//        var itinerarioSalv = mapV.loadCoordinates()
+//        print(itinerarioSalv)
+        if let posizione = UserDefaults.standard.value(forKey: "Posizione iniziale") as? String{
+            print(posizione)
+//            routes.append(route(da: posizione, a: "Infinito ed oltre", minuti: 42, chilometri: 42, loc: posizione, itin: itinerarioSalv!))
+            
+            
+            
+            if let data = UserDefaults.standard.data(forKey: "routes"),
+                let lista = NSKeyedUnarchiver.unarchiveObject(with: data) as? [route] {
+                routes.removeAll()
+                 lista.forEach({
+                    
+                routes.append(route(da: $0.tpartenza, a: $0.tarrivo, minuti: $0.minuti, chilometri: $0.chilometri, loc: $0.locality, itin: $0.itin))
+                    
+                    
+                    
+                    print( $0.tpartenza, $0.tarrivo)
+                    
+                 })
+                
+            } else {
+                print("Errore")
+            }
+            
+            // conta gli itinerari per ogni locality
+            var arrayLocal:[String] = []
+            for route in routes{
+                arrayLocal.append(route.locality)
+            }
+            counts = arrayLocal.reduce(into: [:]) { counts, word in counts[word, default: 0] += 1 }
+            print(counts)
+//          let cMaddaloni = counts["Maddaloni"]
+//            print(cMaddaloni!) errore n il
+        }
         
         
     }
