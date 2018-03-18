@@ -50,7 +50,7 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer!{
         
         if (overlay is MKPolyline) {
-            var pr = MKPolylineRenderer(overlay: overlay)
+            let pr = MKPolylineRenderer(overlay: overlay)
             pr.strokeColor = UIColor.red.withAlphaComponent(0.5)
             pr.lineWidth = 5
             return pr
@@ -78,7 +78,7 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
        let coordinateItinerario = loadCoordinates()
         
         
-        var polylineItinerario = MKPolyline(coordinates: coordinateItinerario!, count: (coordinateItinerario?.count)!)
+        let polylineItinerario = MKPolyline(coordinates: coordinateItinerario!, count: (coordinateItinerario?.count)!)
         mappaItinerario.add(polylineItinerario,level: MKOverlayLevel.aboveRoads)
     }
 

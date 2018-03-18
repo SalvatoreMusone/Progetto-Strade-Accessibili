@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+
 //var locality=""
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -20,7 +21,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
             self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
             } }
-        
         
     }
 
