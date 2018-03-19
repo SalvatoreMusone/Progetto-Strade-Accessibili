@@ -308,7 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ANQCCK3BGZ;
+				DEVELOPMENT_TEAM = 93TJ33DWA8;
 				INFOPLIST_FILE = "Progetto Strade Accessibili/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili21";
@@ -323,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ANQCCK3BGZ;
+				DEVELOPMENT_TEAM = 93TJ33DWA8;
 				INFOPLIST_FILE = "Progetto Strade Accessibili/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili21";
