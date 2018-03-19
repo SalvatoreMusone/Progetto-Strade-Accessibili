@@ -330,6 +330,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-dW-7ab">
+                                <rect key="frame" x="229" y="293" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scegli foto"/>
+                                <connections>
+                                    <action selector="inseriscifoto:" destination="MY8-zh-jvr" eventType="touchUpInside" id="y8s-Hd-tF5"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aggiungi Titolo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byw-rq-ovF">
                                 <rect key="frame" x="62" y="322" width="240" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -337,12 +345,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-dW-7ab">
-                                <rect key="frame" x="229" y="293" width="73" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-wl-Ytc">
+                                <rect key="frame" x="62" y="293" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Scegli foto"/>
+                                <state key="normal" title="Scatta foto"/>
                                 <connections>
-                                    <action selector="inseriscifoto:" destination="MY8-zh-jvr" eventType="touchUpInside" id="y8s-Hd-tF5"/>
+                                    <action selector="scatta:" destination="MY8-zh-jvr" eventType="touchUpInside" id="WTa-n8-jcw"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -25,6 +25,7 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
 
     @IBAction func inseriscifoto(_ sender: Any) {
         let ipc = UIImagePickerController()
+        
         ipc.delegate = self
         present(ipc, animated: true, completion: nil)
     }
@@ -34,4 +35,23 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         dismiss(animated: true, completion: nil)
     }
 
-}
+    
+    @IBAction func scatta(_ sender: Any) {
+        
+        let ipc = UIImagePickerController()
+         ipc.sourceType = .camera
+        ipc.delegate = self
+        present(ipc, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllere(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        foto.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+    }
+
+    
+    
+    }
+
+
+
