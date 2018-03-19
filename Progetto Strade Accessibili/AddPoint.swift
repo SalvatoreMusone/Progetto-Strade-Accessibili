@@ -36,6 +36,7 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
 
     @IBAction func inseriscifoto(_ sender: Any) {
         let ipc = UIImagePickerController()
+        
         ipc.delegate = self
         present(ipc, animated: true, completion: nil)
     }
