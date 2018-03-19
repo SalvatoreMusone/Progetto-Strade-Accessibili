@@ -28,7 +28,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-g5-mle">
                                 <rect key="frame" x="20" y="50" width="335" height="557"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to: ....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Ko-AS0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Ko-AS0">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="28"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                         <nil key="textColor"/>
@@ -315,6 +315,9 @@
                                 <rect key="frame" x="246" y="493" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SALVA"/>
+                                <connections>
+                                    <action selector="Salva:" destination="MY8-zh-jvr" eventType="touchUpInside" id="9vz-Z3-a92"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-42-FTd">
                                 <rect key="frame" x="62" y="371" width="240" height="114"/>
@@ -350,7 +353,9 @@
                         <viewLayoutGuide key="safeArea" id="pAB-lo-oeN"/>
                     </view>
                     <connections>
+                        <outlet property="descrizione" destination="QJv-42-FTd" id="jGT-pS-5pE"/>
                         <outlet property="foto" destination="966-Zh-57j" id="7ev-pX-qCs"/>
+                        <outlet property="tnewpoint" destination="byw-rq-ovF" id="LOX-GW-uuD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jyo-v9-Dcf" userLabel="First Responder" sceneMemberID="firstResponder"/>

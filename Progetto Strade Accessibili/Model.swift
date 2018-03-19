@@ -67,8 +67,18 @@ var routes: [route] = []
 
 
 var itinerarioSelezionato:route!
+class Point{
+    var annotation: MKPointAnnotation
+    var immagine: UIImage
+    
+    init(p: MKPointAnnotation, immagine: UIImage){
+        
+        self.annotation = p
+        self.immagine = immagine
+        
+    }
+}
 
 //model del point of interest
-var points: [MKPointAnnotation] = []
-
+var points: [Point] = []
 
