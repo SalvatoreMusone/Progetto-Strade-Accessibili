@@ -97,10 +97,15 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
                 self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
             } }
-        if points.count != 0{
-            for i in 0..<points.count{
-                var annotat: MKPointAnnotation
-                annotat = points[i].annotation
+        if pooints.count != 0{
+            for i in 0..<pooints.count{
+                var annotat = MKPointAnnotation()
+                
+                annotat.coordinate = pooints[i].location.coordinate as CLLocationCoordinate2D
+                annotat.title = pooints[i].title
+                annotat.subtitle = pooints[i].subtitle
+                
+                //                annotat = pooints[i].annotation
                 mappa.addAnnotation(annotat)
             }
         }

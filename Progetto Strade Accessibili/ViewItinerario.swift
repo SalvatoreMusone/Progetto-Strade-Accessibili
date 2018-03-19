@@ -17,25 +17,32 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     let locationManag = LocationManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
-         mappaItinerario.delegate = self
+        
+        
+        mappaItinerario.delegate = self
         locationManag.delegate = self
         mappaItinerario.showsUserLocation = true
         mappaItinerario.mapType = MKMapType.hybrid
-         mappaItinerario.userTrackingMode = MKUserTrackingMode.followWithHeading
+        mappaItinerario.userTrackingMode = MKUserTrackingMode.followWithHeading
         createPolyline()
         
         ldestinazione.text = "Arrivo: \(itinerarioSelezionato.tarrivo)"
         lpartenza.text = "Partenza: \(itinerarioSelezionato.tpartenza)"
         // Do any additional setup after loading the view.
-        if points.count != 0{
-            for i in 0..<points.count{
-                var annotat: MKPointAnnotation
-                annotat = points[i].annotation
+        if pooints.count != 0{
+            for i in 0..<pooints.count{
+                var annotat = MKPointAnnotation()
+                
+                annotat.coordinate = pooints[i].location.coordinate as CLLocationCoordinate2D
+                annotat.title = pooints[i].title
+                annotat.subtitle = pooints[i].subtitle
+                
+                //                annotat = pooints[i].annotation
                 mappaItinerario.addAnnotation(annotat)
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,13 +53,13 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         mappaItinerario.delegate = nil
         
     }
-
+    
     
     // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    }
+    //
+    //    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //    }
     
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer!{
@@ -68,8 +75,25 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         
     }
     
+    
+    
+    
+    
+    func loadCoordinatesPoint() -> [CLLocationCoordinate2D]? {
+        
+        let locations = itinerarioSelezionato.itin
+        
+        
+        let coordinates = locations.map { location -> CLLocationCoordinate2D in
+            return location.coordinate
+        }
+        
+        return coordinates
+    }
+    
+    
     func loadCoordinates() -> [CLLocationCoordinate2D]? {
-       
+        
         let locations = itinerarioSelezionato.itin
         
         
@@ -83,11 +107,12 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     
     func createPolyline(){
         
-       let coordinateItinerario = loadCoordinates()
+        let coordinateItinerario = loadCoordinates()
         
         
         let polylineItinerario = MKPolyline(coordinates: coordinateItinerario!, count: (coordinateItinerario?.count)!)
         mappaItinerario.add(polylineItinerario,level: MKOverlayLevel.aboveRoads)
     }
-
+    
 }
+

@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 var coordinate = CLLocationCoordinate2D()
+var location = CLLocation()
 class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate,CLLocationManagerDelegate {
     @IBOutlet var foto: UIImageView!
     let locationManager = LocationManager.shared
@@ -20,20 +21,21 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
     @IBOutlet var descrizione: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-     locationManager.delegate = self
+        locationManager.delegate = self
         if let loc = locationManager.location{
+            location = loc
             coordinate = loc.coordinate
         }
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     @IBAction func inseriscifoto(_ sender: Any) {
         let ipc = UIImagePickerController()
         
@@ -45,12 +47,12 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         foto.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }
-
+    
     
     @IBAction func scatta(_ sender: Any) {
         
         let ipc = UIImagePickerController()
-         ipc.sourceType = .camera
+        ipc.sourceType = .camera
         ipc.delegate = self
         present(ipc, animated: true, completion: nil)
     }
@@ -59,11 +61,10 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         foto.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func Salva(_ sender: Any) {
         let newpoint = MKPointAnnotation()
         newpoint.coordinate = coordinate
-        
         
         newpoint.title = tnewpoint.text!
         newpoint.subtitle = descrizione.text!
@@ -72,8 +73,21 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         print("---------")
         print(newpoint.title!)
         print(newpoint.subtitle!)
-        points.append(Point(annotation: newpoint, immagine: foto.image!))
+        print("---------")
+        
+        
+        
+        
+        
+        pooints.append(Pooint(location: location, title: newpoint.title!, subtitle: newpoint.subtitle!, immagine: foto.image!))
+        //points.append(Point(annotation: newpoint, immagine: foto.image!))
+        let encodedData =
+            NSKeyedArchiver.archivedData(withRootObject: pooints)
+        UserDefaults.standard.set(encodedData, forKey: "pooints")
         
         
     }
+    
 }
+
+

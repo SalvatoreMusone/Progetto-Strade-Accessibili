@@ -12,12 +12,12 @@ var counts=[String : Int]()
 var listaCaricata = [route]()
 var posizioneWelcome=""
 class Homepage: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet var welcome: UILabel!
     let locationManag = LocationManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         let geoCoder = CLGeocoder()
         if let loc = locationManag.location{
             geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
@@ -25,28 +25,46 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
                 
             } }
         
-       
-//        var mapV = MapViewController()
-//        var itinerarioSalv = mapV.loadCoordinates()
-//        print(itinerarioSalv)
+        
+        //        var mapV = MapViewController()
+        //        var itinerarioSalv = mapV.loadCoordinates()
+        //        print(itinerarioSalv)
         if let posizione = UserDefaults.standard.value(forKey: "Posizione iniziale") as? String{
             print(posizione)
-//            routes.append(route(da: posizione, a: "Infinito ed oltre", minuti: 42, chilometri: 42, loc: posizione, itin: itinerarioSalv!))
+            //            routes.append(route(da: posizione, a: "Infinito ed oltre", minuti: 42, chilometri: 42, loc: posizione, itin: itinerarioSalv!))
             
             
             
             if let data = UserDefaults.standard.data(forKey: "routes"),
                 let lista = NSKeyedUnarchiver.unarchiveObject(with: data) as? [route] {
                 routes.removeAll()
-                 lista.forEach({
+                lista.forEach({
                     
-                routes.append(route(da: $0.tpartenza, a: $0.tarrivo, minuti: $0.minuti, chilometri: $0.chilometri, loc: $0.locality, itin: $0.itin))
+                    routes.append(route(da: $0.tpartenza, a: $0.tarrivo, minuti: $0.minuti, chilometri: $0.chilometri, loc: $0.locality, itin: $0.itin))
                     
                     
                     
                     print( $0.tpartenza, $0.tarrivo)
                     
-                 })
+                })
+                
+            } else {
+                print("Errore")
+            }
+            
+            
+            if let data = UserDefaults.standard.data(forKey: "pooints"),
+                let lista = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Pooint] {
+                pooints.removeAll()
+                lista.forEach({
+                    
+                    pooints.append(Pooint(location: $0.location, title: $0.title, subtitle: $0.subtitle, immagine: $0.immagine))
+                    
+                    
+                    
+                    print( $0.location)
+                    
+                })
                 
             } else {
                 print("Errore")
@@ -59,8 +77,8 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
             }
             counts = arrayLocal.reduce(into: [:]) { counts, word in counts[word, default: 0] += 1 }
             print(counts)
-
-          
+            
+            
             
         }
         
@@ -70,33 +88,33 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//        if posizioneWelcome == ""{
-//            self.viewDidLoad()
-//        }
-//
-//        }
+    //    override func viewDidAppear(_ animated: Bool) {
+    //
+    //        if posizioneWelcome == ""{
+    //            self.viewDidLoad()
+    //        }
+    //
+    //        }
     override func viewDidAppear(_ animated: Bool) {
         if posizioneWelcome==""{
             self.viewDidLoad()
         }
     }
-   
-//    override func viewWillAppear(_ animated: Bool) {
-//        if posizioneWelcome==""{
-//            self.viewDidLoad()
-//        }
-//           }
+    
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        if posizioneWelcome==""{
+    //            self.viewDidLoad()
+    //        }
+    //           }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     func handlerIndirizzo(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         
         if let error = error {
@@ -114,5 +132,6 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
                 posizioneWelcome = "Indirizzo non disponibile "
             }
         }
+    }
 }
-}
+

@@ -31,12 +31,12 @@ class route: NSObject, NSCoding {
         self.chilometri = chilometri
         self.locality = loc
         self.itin = itin
-//         var it = Itinerari()
-//
-//        it.itinerari.append(locatio)
+        //         var it = Itinerari()
+        //
+        //        it.itinerari.append(locatio)
     }
     
-
+    
     required init(coder decoder: NSCoder) {
         self.tpartenza = decoder.decodeObject(forKey: "partenza") as? String ?? ""
         self.tarrivo = decoder.decodeObject(forKey: "arrivo") as? String ?? ""
@@ -44,8 +44,8 @@ class route: NSObject, NSCoding {
         self.chilometri = decoder.decodeDouble(forKey: "chilometri")
         self.locality = decoder.decodeObject(forKey: "locality") as? String ?? ""
         self.itin = decoder.decodeObject(forKey: "itin") as? [CLLocation] ?? [CLLocation()]
-       
-    
+        
+        
     }
     
     func encode(with coder: NSCoder) {
@@ -60,21 +60,55 @@ class route: NSObject, NSCoding {
     
     
     
- 
+    
 }
 
 var routes: [route] = []
 
 
 var itinerarioSelezionato:route!
+
 struct Point{
     var annotation: MKPointAnnotation
     var immagine: UIImage
     
 }
-
+class Pooint: NSObject, NSCoding {
+    var location:CLLocation
+    var title:String
+    var subtitle:String
+    var immagine: UIImage
+    
+    init(location:CLLocation,title:String,subtitle:String ,immagine:UIImage){
+        self.location = location
+        self.title = title
+        self.subtitle = subtitle
+        self.immagine = immagine
+    }
+    
+    required init(coder decoder: NSCoder) {
+        self.location = decoder.decodeObject(forKey: "location") as? CLLocation ?? CLLocation()
+        self.title = decoder.decodeObject(forKey: "title") as? String ?? ""
+        self.subtitle = decoder.decodeObject(forKey: "subtitle") as? String ?? ""
+        self.immagine = decoder.decodeObject(forKey: "immagine") as? UIImage ?? UIImage()
+        
+        
+        
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(location, forKey: "location")
+        coder.encode(title, forKey: "title")
+        coder.encode(subtitle, forKey: "subtitle")
+        coder.encode(immagine, forKey: "immagine")
+        
+    }
+    
+    
+}
 
 //model del point of interest
 var points: [Point] = [
 ]
 
+var pooints: [Pooint] = []
