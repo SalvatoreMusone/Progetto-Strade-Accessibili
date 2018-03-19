@@ -8,8 +8,9 @@
 
 import UIKit
 
-class AddPoint: UIViewController {
-
+class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    @IBOutlet var foto: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +23,15 @@ class AddPoint: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func inseriscifoto(_ sender: Any) {
+        let ipc = UIImagePickerController()
+        ipc.delegate = self
+        present(ipc, animated: true, completion: nil)
     }
-    */
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        foto.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+    }
 
 }
