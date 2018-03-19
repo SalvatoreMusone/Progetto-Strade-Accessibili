@@ -260,6 +260,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWf-Z7-3aU">
                                                 <rect key="frame" x="182.5" y="0.0" width="182.5" height="30"/>
                                                 <state key="normal" title="Stop"/>
+                                                <connections>
+                                                    <segue destination="MY8-zh-jvr" kind="show" id="Jpy-de-hgu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -282,6 +285,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcJ-A1-6Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1224.8" y="1788.7556221889056"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZBF-CO-Eqe">
+            <objects>
+                <viewController id="MY8-zh-jvr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6b-54-SBd">
+                        <rect key="frame" x="0.0" y="0.0" width="365" height="531"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pAB-lo-oeN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyo-v9-Dcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2145" y="1776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0de-31-NNG">
