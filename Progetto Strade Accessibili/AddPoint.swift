@@ -76,6 +76,4 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         
         
     }
-    
 }
-

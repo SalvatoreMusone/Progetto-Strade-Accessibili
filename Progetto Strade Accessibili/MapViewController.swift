@@ -98,7 +98,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
                 self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
             } }
         if points.count != 0{
-            for i in 0...points.count{
+            for i in 0..<points.count{
                 var annotat: MKPointAnnotation
                 annotat = points[i].annotation
                 mappa.addAnnotation(annotat)

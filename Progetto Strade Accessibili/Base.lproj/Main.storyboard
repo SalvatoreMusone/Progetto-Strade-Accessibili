@@ -148,14 +148,26 @@
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pIy-gT-Ri9">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="580"/>
                                     </mapView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNg-ug-FJC">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Qy-0z-EqX">
                                         <rect key="frame" x="0.0" y="583" width="360" height="44"/>
-                                        <state key="normal" title="Stop"/>
-                                        <connections>
-                                            <action selector="stop:" destination="CAX-Nb-4cT" eventType="touchUpInside" id="qC7-Gc-Mpo"/>
-                                            <segue destination="5Xr-aG-4ni" kind="show" id="Wdz-wx-IBG"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNg-ug-FJC">
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                                                <state key="normal" title="Stop"/>
+                                                <connections>
+                                                    <action selector="stop:" destination="CAX-Nb-4cT" eventType="touchUpInside" id="qC7-Gc-Mpo"/>
+                                                    <segue destination="5Xr-aG-4ni" kind="show" id="Wdz-wx-IBG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl7-6G-i9I">
+                                                <rect key="frame" x="180" y="0.0" width="180" height="44"/>
+                                                <state key="normal" title="Add new point"/>
+                                                <connections>
+                                                    <segue destination="H1h-rO-2K9" kind="show" id="Zg0-e4-mGP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" axis="vertical" distribution="fill"/>
                             </stackView>
@@ -182,15 +194,15 @@
             <objects>
                 <tableViewController id="NlY-fb-ukh" customClass="TableViewController" customModule="Progetto_Strade_Accessibili" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="82" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HBh-rR-g0w">
-                        <rect key="frame" x="0.0" y="0.0" width="365" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cella" id="Coy-cL-xBx" customClass="TableViewCell" customModule="Progetto_Strade_Accessibili" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="365" height="82"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Coy-cL-xBx" id="5Nb-sQ-Op2">
-                                    <rect key="frame" x="0.0" y="0.0" width="365" height="81.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCn-8R-smW">
@@ -267,6 +279,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-Dh-gHz">
                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="167.5"/>
                                                 <state key="normal" title="Stop"/>
+                                                <connections>
+                                                    <segue destination="NlY-fb-ukh" kind="show" id="HV9-N9-kk7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWf-Z7-3aU">
                                                 <rect key="frame" x="180" y="0.0" width="180" height="167.5"/>
@@ -389,6 +404,78 @@
             </objects>
             <point key="canvasLocation" x="626" y="94"/>
         </scene>
+        <!--Add Point-->
+        <scene sceneID="fVU-bF-sKl">
+            <objects>
+                <viewController id="H1h-rO-2K9" customClass="AddPoint" customModule="Progetto_Strade_Accessibili" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RMg-aV-UtZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="5hF-zA-2ac">
+                                <rect key="frame" x="62" y="73" width="240" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hdh-FM-LRh">
+                                <rect key="frame" x="62" y="371" width="240" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inserisci descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doq-6S-fWC">
+                                <rect key="frame" x="62" y="350" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4h-EC-Src">
+                                <rect key="frame" x="229" y="293" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scegli foto"/>
+                                <connections>
+                                    <action selector="inseriscifoto:" destination="H1h-rO-2K9" eventType="touchUpInside" id="DnU-b6-9BI"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aggiungi Titolo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKd-lp-WEc">
+                                <rect key="frame" x="62" y="322" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpf-l3-xjM">
+                                <rect key="frame" x="62" y="293" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scatta foto"/>
+                                <connections>
+                                    <action selector="scatta:" destination="H1h-rO-2K9" eventType="touchUpInside" id="sT3-mW-djj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGZ-VV-cN1">
+                                <rect key="frame" x="256" y="502" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SALVA"/>
+                                <connections>
+                                    <action selector="Salva:" destination="H1h-rO-2K9" eventType="touchUpInside" id="3F8-kw-dJ7"/>
+                                    <segue destination="CAX-Nb-4cT" kind="show" id="Y3N-Ea-Sju"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1rF-HD-3n6"/>
+                    </view>
+                    <connections>
+                        <outlet property="descrizione" destination="Hdh-FM-LRh" id="H1N-yc-Z8d"/>
+                        <outlet property="foto" destination="5hF-zA-2ac" id="d5s-bD-VuD"/>
+                        <outlet property="tnewpoint" destination="xKd-lp-WEc" id="TaS-FI-cxv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRF-5u-lf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3460" y="1666"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add-image" width="800" height="800"/>
@@ -399,7 +486,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="Jpy-de-hgu"/>
         <segue reference="N4S-pU-LxR"/>
-        <segue reference="0rf-8M-n7g"/>
+        <segue reference="HV9-N9-kk7"/>
+        <segue reference="Y3N-Ea-Sju"/>
         <segue reference="Wdz-wx-IBG"/>
     </inferredMetricsTieBreakers>
 </document>
