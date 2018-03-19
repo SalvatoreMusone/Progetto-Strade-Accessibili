@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-
+import MapKit
 //struct Itinerari{
 //    var itinerari: Array<Array<CLLocationCoordinate2D>> = []
 //
@@ -67,19 +67,8 @@ var routes: [route] = []
 
 
 var itinerarioSelezionato:route!
-//var listaItinerari = [String:Itinerari]()
-//listaItinerari["Aversa"]=Itinerari(itinerari: locatio)
+
+//model del point of interest
+var points: [MKPointAnnotation] = []
 
 
-//var cpartenza: CLLocationCoordinate2D
-//var cArrivo: CLLocationCoordinate2D
-
-
-//cpartenza = coordinate_partenza
-//cArrivo = coordinate_arrivo
-
-//, coordinate_partenza:CLLocationCoordinate2D, coordinate_arrivo:CLLocationCoordinate2D
-
-//, coordinate_partenza: CLLocationCoordinate2D(latitude: 40.98983, longitude: 14.20000), coordinate_arrivo: CLLocationCoordinate2D(latitude: 40.969696, longitude: 14.80201)
-
-//, coordinate_partenza:CLLocationCoordinate2D(latitude: 49.90000, longitude: 14.1411441), coordinate_arrivo: CLLocationCoordinate2D(latitude: 40.181819, longitude: 10.404040)

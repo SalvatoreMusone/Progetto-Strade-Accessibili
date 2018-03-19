@@ -53,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				BE0B0A74205922BF006976A2 /* Progetto Strade Accessibili */,
-				BE0B0A73205922BF006976A2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +62,7 @@
 				BE0B0A72205922BF006976A2 /* Progetto Strade Accessibili.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		BE0B0A74205922BF006976A2 /* Progetto Strade Accessibili */ = {
@@ -81,6 +81,7 @@
 				BE0B0A7E205922BF006976A2 /* LaunchScreen.storyboard */,
 				BE0B0A81205922BF006976A2 /* Info.plist */,
 				BE39244C20595D26000E3B60 /* Model.swift */,
+				BE0B0A73205922BF006976A2 /* Products */,
 			);
 			path = "Progetto Strade Accessibili";
 			sourceTree = "<group>";
@@ -303,7 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A49A4995C7;
+				DEVELOPMENT_TEAM = ANQCCK3BGZ;
 				INFOPLIST_FILE = "Progetto Strade Accessibili/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili2";
@@ -318,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A49A4995C7;
+				DEVELOPMENT_TEAM = ANQCCK3BGZ;
 				INFOPLIST_FILE = "Progetto Strade Accessibili/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Progetto-Strade-Accessibili2";

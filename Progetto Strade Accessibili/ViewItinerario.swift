@@ -12,7 +12,8 @@ import MapKit
 class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mappaItinerario: MKMapView!
-    
+    @IBOutlet var lpartenza: UILabel!
+    @IBOutlet var ldestinazione: UILabel!
     let locationManag = LocationManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
          mappaItinerario.userTrackingMode = MKUserTrackingMode.followWithHeading
         createPolyline()
         
+        ldestinazione.text = "Arrivo: \(itinerarioSelezionato.tarrivo)"
+        lpartenza.text = "Partenza: \(itinerarioSelezionato.tpartenza)"
         // Do any additional setup after loading the view.
     }
 
