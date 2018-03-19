@@ -110,6 +110,7 @@ class TableViewController: UITableViewController {
             {
                 print("delete row at \(indexPath)")
                 routes.remove(at: indexPath.row);
+                
                 tableView.deleteRows( at: [indexPath], with: .left)
                 
             }

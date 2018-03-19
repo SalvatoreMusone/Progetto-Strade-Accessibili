@@ -44,7 +44,7 @@ class route: NSObject, NSCoding {
         self.chilometri = decoder.decodeDouble(forKey: "chilometri")
         self.locality = decoder.decodeObject(forKey: "locality") as? String ?? ""
         self.itin = decoder.decodeObject(forKey: "itin") as? [CLLocation] ?? [CLLocation()]
-        // se array è nil  coordinate setta coordinate standard hahaha
+       
     
     }
     
