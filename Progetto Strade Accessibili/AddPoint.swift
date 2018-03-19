@@ -45,82 +45,21 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         foto.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    
+    @IBAction func scatta(_ sender: Any) {
+        
+        let ipc = UIImagePickerController()
+         ipc.sourceType = .camera
+        ipc.delegate = self
+        present(ipc, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllere(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        foto.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
+    }
+
     @IBAction func Salva(_ sender: Any) {
         let newpoint = MKPointAnnotation()
         newpoint.coordinate = coordinate
@@ -139,3 +78,4 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
     }
     
 }
+
