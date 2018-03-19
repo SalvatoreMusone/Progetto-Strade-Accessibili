@@ -50,12 +50,14 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         newpoint.coordinate = coordinate
         
         
-        newpoint.title = tnewpoint.text
-        newpoint.subtitle = descrizione.text
-        
-        
-        
-        points.append(Point(p: newpoint, immagine: foto.image!))
+        newpoint.title = tnewpoint.text!
+        newpoint.subtitle = descrizione.text!
+        print(tnewpoint.text!)
+        print(descrizione.text)
+        print("---------")
+        print(newpoint.title!)
+        print(newpoint.subtitle!)
+        points.append(Point(annotation: newpoint, immagine: foto.image!))
         
         
     }

@@ -27,6 +27,13 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
         ldestinazione.text = "Arrivo: \(itinerarioSelezionato.tarrivo)"
         lpartenza.text = "Partenza: \(itinerarioSelezionato.tpartenza)"
         // Do any additional setup after loading the view.
+        if points.count != 0{
+            for i in 0..<points.count{
+                var annotat: MKPointAnnotation
+                annotat = points[i].annotation
+                mappaItinerario.addAnnotation(annotat)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

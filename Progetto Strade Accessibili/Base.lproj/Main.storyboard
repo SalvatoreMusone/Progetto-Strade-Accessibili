@@ -235,23 +235,23 @@
             <objects>
                 <viewController id="4JY-HZ-Bm7" customClass="ViewItinerario" customModule="Progetto_Strade_Accessibili" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l4H-J8-QlJ">
-                        <rect key="frame" x="0.0" y="0.0" width="365" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="llF-9H-A9j">
-                                <rect key="frame" x="10" y="30" width="350" height="491"/>
+                                <rect key="frame" x="10" y="30" width="360" height="627"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="9Tz-KO-ky0">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="17.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="17.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UP-JJ-lvC">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="17.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="186" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoH-ci-4Pf">
-                                                <rect key="frame" x="181" y="0.0" width="169" height="17.5"/>
+                                                <rect key="frame" x="186" y="0.0" width="174" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -259,17 +259,17 @@
                                         </subviews>
                                     </stackView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-he-v30">
-                                        <rect key="frame" x="0.0" y="17.5" width="350" height="442"/>
+                                        <rect key="frame" x="0.0" y="17.5" width="360" height="442"/>
                                     </mapView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RDM-AV-gNw">
-                                        <rect key="frame" x="0.0" y="459.5" width="350" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="459.5" width="360" height="167.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-Dh-gHz">
-                                                <rect key="frame" x="0.0" y="0.0" width="175" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="167.5"/>
                                                 <state key="normal" title="Stop"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWf-Z7-3aU">
-                                                <rect key="frame" x="175" y="0.0" width="175" height="31.5"/>
+                                                <rect key="frame" x="180" y="0.0" width="180" height="167.5"/>
                                                 <state key="normal" title="Add new point"/>
                                                 <connections>
                                                     <segue destination="MY8-zh-jvr" kind="show" id="Jpy-de-hgu"/>
@@ -304,21 +304,13 @@
             <objects>
                 <viewController id="MY8-zh-jvr" customClass="AddPoint" customModule="Progetto_Strade_Accessibili" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6b-54-SBd">
-                        <rect key="frame" x="0.0" y="0.0" width="365" height="531"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="966-Zh-57j">
                                 <rect key="frame" x="62" y="73" width="240" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o69-w9-I61">
-                                <rect key="frame" x="246" y="493" width="65" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SALVA"/>
-                                <connections>
-                                    <action selector="Salva:" destination="MY8-zh-jvr" eventType="touchUpInside" id="9vz-Z3-a92"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-42-FTd">
                                 <rect key="frame" x="62" y="371" width="240" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -346,6 +338,15 @@
                                 <state key="normal" title="Scegli foto"/>
                                 <connections>
                                     <action selector="inseriscifoto:" destination="MY8-zh-jvr" eventType="touchUpInside" id="y8s-Hd-tF5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o69-w9-I61">
+                                <rect key="frame" x="256" y="502" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SALVA"/>
+                                <connections>
+                                    <action selector="Salva:" destination="MY8-zh-jvr" eventType="touchUpInside" id="9vz-Z3-a92"/>
+                                    <segue destination="4JY-HZ-Bm7" kind="show" id="N4S-pU-LxR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -388,6 +389,8 @@
         <image name="listaicon" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Jpy-de-hgu"/>
+        <segue reference="N4S-pU-LxR"/>
         <segue reference="0rf-8M-n7g"/>
         <segue reference="Wdz-wx-IBG"/>
     </inferredMetricsTieBreakers>

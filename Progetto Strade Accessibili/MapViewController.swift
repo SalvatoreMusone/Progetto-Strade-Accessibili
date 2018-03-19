@@ -97,9 +97,13 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
                 self.handlerIndirizzo(withPlacemarks: placemarks, error: error)
             } }
-        
-        
-        
+        if points.count != 0{
+            for i in 0...points.count{
+                var annotat: MKPointAnnotation
+                annotat = points[i].annotation
+                mappa.addAnnotation(annotat)
+            }
+        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -235,9 +239,6 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         
         return coordinates
     }
-    
-    
-    
     
     
     
