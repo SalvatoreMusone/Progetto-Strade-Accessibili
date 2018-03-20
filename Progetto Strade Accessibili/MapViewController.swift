@@ -113,6 +113,42 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func AddNewPoint(_ sender: Any) {
+        locationManag.stopUpdatingLocation()
+        coordinateItinerario = {
+            
+            var array = Array<CLLocationCoordinate2D>()
+            for i in 0 ..< aPolyline.pointCount {
+                
+                let point = aPolyline.points()[i]
+                
+                array.append(MKCoordinateForMapPoint(point))
+            }
+            
+            return array
+        }()
+        print("salvato itinerario con",coordinateItinerario.count, "coordinate")
+        for element in coordinateItinerario {
+            
+            print("itinerario:",element)
+        }
+        print("posizione Salvata: ",posizioneIniziale)
+        
+        UserDefaults.standard.set(posizioneIniziale, forKey: "Posizione iniziale")
+        
+        let geoCoderFin = CLGeocoder()
+        if let locfin = locationManag.location{
+            geoCoderFin.reverseGeocodeLocation(locfin){(placemarks, error) in
+                self.handlerIndirizzoFinale(withPlacemarks: placemarks, error: error)
+            } }
+        //        if indirizzoFinale == nil {
+        //            print("posizione finale nulla")
+        //        }
+        
+        
+        
+        
+    }
     
     @IBAction func stop(_ sender: Any) {
         locationManag.stopUpdatingLocation()
