@@ -12,12 +12,12 @@ var counts=[String : Int]()
 var listaCaricata = [route]()
 var posizioneWelcome=""
 class Homepage: UIViewController, CLLocationManagerDelegate {
-    
+  
     @IBOutlet var welcome: UILabel!
     let locationManag = LocationManager.shared
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         let geoCoder = CLGeocoder()
         if let loc = locationManag.location{
             geoCoder.reverseGeocodeLocation(loc){(placemarks, error) in
@@ -98,14 +98,16 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         if posizioneWelcome==""{
             self.viewDidLoad()
+            
         }
     }
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        if posizioneWelcome==""{
-    //            self.viewDidLoad()
-    //        }
-    //           }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+        override func viewWillAppear(_ animated: Bool) {
+           
+                navigationController?.isNavigationBarHidden = true            
+               }
     /*
      // MARK: - Navigation
      
