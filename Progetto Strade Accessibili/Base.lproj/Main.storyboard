@@ -25,9 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="te1-Ir-aUU">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="te1-Ir-aUU">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                             </imageView>
                             <stackView contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-g5-mle">
@@ -69,7 +68,11 @@
                         <constraints>
                             <constraint firstItem="ehx-Nt-TNZ" firstAttribute="trailing" secondItem="1ZH-g5-mle" secondAttribute="trailing" constant="20" id="Iey-bh-1Is"/>
                             <constraint firstAttribute="bottomMargin" secondItem="1ZH-g5-mle" secondAttribute="bottom" constant="60" id="Obk-an-JUh"/>
+                            <constraint firstItem="te1-Ir-aUU" firstAttribute="leading" secondItem="ehx-Nt-TNZ" secondAttribute="leading" id="XR4-cM-8Ij"/>
+                            <constraint firstItem="te1-Ir-aUU" firstAttribute="top" secondItem="ehx-Nt-TNZ" secondAttribute="top" id="cDr-U2-41N"/>
                             <constraint firstItem="1ZH-g5-mle" firstAttribute="leading" secondItem="ehx-Nt-TNZ" secondAttribute="leading" constant="20" id="cw0-v9-LPi"/>
+                            <constraint firstItem="te1-Ir-aUU" firstAttribute="bottom" secondItem="ehx-Nt-TNZ" secondAttribute="bottom" id="mEg-CR-dmm"/>
+                            <constraint firstItem="te1-Ir-aUU" firstAttribute="trailing" secondItem="ehx-Nt-TNZ" secondAttribute="trailing" id="oDx-cn-NmK"/>
                             <constraint firstItem="1ZH-g5-mle" firstAttribute="top" secondItem="ehx-Nt-TNZ" secondAttribute="top" constant="30" id="w3C-HW-7GO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ehx-Nt-TNZ"/>
