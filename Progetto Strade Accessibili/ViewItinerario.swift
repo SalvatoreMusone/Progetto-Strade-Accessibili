@@ -77,17 +77,17 @@ class ViewItinerario: UIViewController , CLLocationManagerDelegate, MKMapViewDel
     
 
 
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
-        if annotation.coordinate.latitude != pooints[0].location.coordinate.latitude && annotation.coordinate.longitude != pooints[0].location.coordinate.longitude
-        {return nil}
-        let av = MKAnnotationView(annotation: annotation, reuseIdentifier: "l")
-        av.canShowCallout = true
-        av.image = #imageLiteral(resourceName: "back")
-        av.frame.size = CGSize(width: 96, height: 96)
-    
-        return av
-    }
+//    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
+//        if annotation.coordinate.latitude != pooints[0].location.coordinate.latitude && annotation.coordinate.longitude != pooints[0].location.coordinate.longitude
+//        {return nil}
+//        let av = MKAnnotationView(annotation: annotation, reuseIdentifier: "l")
+//        av.canShowCallout = true
+//        av.image = #imageLiteral(resourceName: "back")
+//        av.frame.size = CGSize(width: 96, height: 96)
+//    
+//        return av
+//    }
     
     
     
