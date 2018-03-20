@@ -163,6 +163,7 @@
                                                 <rect key="frame" x="180" y="0.0" width="180" height="272"/>
                                                 <state key="normal" title="Add new point"/>
                                                 <connections>
+                                                    <action selector="AddNewPoint:" destination="CAX-Nb-4cT" eventType="touchUpInside" id="DpV-tv-YzX"/>
                                                     <segue destination="YAH-ok-TSx" kind="show" id="Qm1-Vn-IcU"/>
                                                 </connections>
                                             </button>
@@ -488,7 +489,7 @@
                                                 <state key="normal" title="SALVA"/>
                                                 <connections>
                                                     <action selector="Salva:" destination="YAH-ok-TSx" eventType="touchUpInside" id="ssu-ky-TS2"/>
-                                                    <segue destination="CAX-Nb-4cT" kind="show" id="V2f-n1-sGN"/>
+                                                    <segue destination="5Xr-aG-4ni" kind="show" id="3WV-7I-4LP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -524,10 +525,9 @@
         <image name="listaicon" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qm1-Vn-IcU"/>
         <segue reference="N4S-pU-LxR"/>
         <segue reference="HV9-N9-kk7"/>
-        <segue reference="V2f-n1-sGN"/>
-        <segue reference="Wdz-wx-IBG"/>
+        <segue reference="0rf-8M-n7g"/>
+        <segue reference="3WV-7I-4LP"/>
     </inferredMetricsTieBreakers>
 </document>
