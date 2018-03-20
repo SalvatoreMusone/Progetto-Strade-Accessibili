@@ -54,9 +54,28 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
     @IBAction func scatta(_ sender: Any) {
         
         let ipc = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
         ipc.sourceType = .camera
         ipc.delegate = self
         present(ipc, animated: true, completion: nil)
+        }else {
+            noCamera()
+        }
+    }
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(
+            alertVC,
+            animated: true,
+            completion: nil)
     }
     
     func imagePickerControllere(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

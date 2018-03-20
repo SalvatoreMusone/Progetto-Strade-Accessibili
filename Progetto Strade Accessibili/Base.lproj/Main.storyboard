@@ -26,21 +26,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="te1-Ir-aUU">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
-                                <variation key="heightClass=compact-widthClass=compact" image="back"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="imageView:te1-Ir-aUU:image"/>
                             </imageView>
                             <stackView contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-g5-mle">
-                                <rect key="frame" x="20" y="94" width="335" height="513"/>
+                                <rect key="frame" x="20" y="50" width="335" height="557"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Ko-AS0">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="263"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="307"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tFy-IY-lvE">
-                                        <rect key="frame" x="0.0" y="363" width="335" height="150"/>
+                                        <rect key="frame" x="0.0" y="407" width="335" height="150"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ez-sd-MEj">
                                                 <rect key="frame" x="0.0" y="0.0" width="167.5" height="150"/>
@@ -97,19 +97,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-XA-4cn">
-                                <rect key="frame" x="5" y="74" width="365" height="583"/>
+                                <rect key="frame" x="5" y="30" width="365" height="627"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="firstBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="5OP-eu-DiM">
-                                        <rect key="frame" x="0.0" y="0.0" width="365" height="248"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="292"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCn-l7-S75">
-                                                <rect key="frame" x="0.0" y="219" width="51.5" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="263" width="51.5" height="24.5"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMK-rb-lSF">
-                                                <rect key="frame" x="334" y="218" width="31" height="30"/>
+                                                <rect key="frame" x="334" y="262" width="31" height="30"/>
                                                 <state key="normal" title="New"/>
                                                 <connections>
                                                     <segue destination="CAX-Nb-4cT" kind="show" id="Mmh-le-brB"/>
@@ -118,7 +118,7 @@
                                         </subviews>
                                     </stackView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWH-Bz-Pyo">
-                                        <rect key="frame" x="0.0" y="270" width="365" height="313"/>
+                                        <rect key="frame" x="0.0" y="314" width="365" height="313"/>
                                         <connections>
                                             <segue destination="NlY-fb-ukh" kind="embed" id="reC-nc-koQ"/>
                                         </connections>
@@ -155,16 +155,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iRl-c2-HBe">
-                                <rect key="frame" x="5" y="74" width="360" height="583"/>
+                                <rect key="frame" x="5" y="30" width="360" height="627"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pIy-gT-Ri9">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="320"/>
                                     </mapView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8Qy-0z-EqX">
-                                        <rect key="frame" x="0.0" y="323" width="360" height="260"/>
+                                        <rect key="frame" x="0.0" y="323" width="360" height="304"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNg-ug-FJC">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="260"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="180" height="304"/>
                                                 <state key="normal" title="Stop"/>
                                                 <connections>
                                                     <action selector="stop:" destination="CAX-Nb-4cT" eventType="touchUpInside" id="qC7-Gc-Mpo"/>
@@ -172,7 +172,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bl7-6G-i9I">
-                                                <rect key="frame" x="180" y="0.0" width="180" height="260"/>
+                                                <rect key="frame" x="180" y="0.0" width="180" height="304"/>
                                                 <state key="normal" title="Add new point"/>
                                                 <connections>
                                                     <action selector="AddNewPoint:" destination="CAX-Nb-4cT" eventType="touchUpInside" id="DpV-tv-YzX"/>
@@ -335,27 +335,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QEy-dA-xfg">
-                                <rect key="frame" x="5" y="25" width="349" height="637"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QEy-dA-xfg">
+                                <rect key="frame" x="5" y="25" width="365" height="637"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="gjx-bd-ars">
-                                        <rect key="frame" x="0.0" y="0.0" width="349" height="318.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="312.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="966-Zh-57j">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="265.5"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="966-Zh-57j">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="260.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="6Sf-DI-y7j">
-                                                <rect key="frame" x="0.0" y="265.5" width="349" height="53"/>
+                                                <rect key="frame" x="0.0" y="260.5" width="365" height="52"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-wl-Ytc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="53"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="52"/>
                                                         <state key="normal" title="Scatta foto"/>
                                                         <connections>
                                                             <action selector="scatta:" destination="MY8-zh-jvr" eventType="touchUpInside" id="WTa-n8-jcw"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHg-dW-7ab">
-                                                        <rect key="frame" x="219.5" y="0.0" width="129.5" height="53"/>
+                                                        <rect key="frame" x="227.5" y="0.0" width="137.5" height="52"/>
                                                         <state key="normal" title="Scegli foto"/>
                                                         <connections>
                                                             <action selector="inseriscifoto:" destination="MY8-zh-jvr" eventType="touchUpInside" id="y8s-Hd-tF5"/>
@@ -365,29 +365,29 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-Dj-vJS">
-                                        <rect key="frame" x="0.0" y="318.5" width="349" height="318.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-Dj-vJS">
+                                        <rect key="frame" x="0.0" y="324.5" width="365" height="312.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aggiungi Titolo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="byw-rq-ovF">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="100.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="88.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inserisci descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfz-qj-eNT">
-                                                <rect key="frame" x="0.0" y="102.5" width="349" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="92.5" width="365" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QJv-42-FTd">
-                                                <rect key="frame" x="0.0" y="125" width="349" height="161.5"/>
+                                                <rect key="frame" x="0.0" y="117" width="365" height="161.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o69-w9-I61">
-                                                <rect key="frame" x="0.0" y="288.5" width="349" height="30"/>
+                                                <rect key="frame" x="0.0" y="282.5" width="365" height="30"/>
                                                 <state key="normal" title="SALVA"/>
                                                 <connections>
                                                     <action selector="Salva:" destination="MY8-zh-jvr" eventType="touchUpInside" id="9vz-Z3-a92"/>
@@ -406,6 +406,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QEy-dA-xfg" secondAttribute="trailing" constant="5" id="Ils-3l-yAV"/>
                             <constraint firstItem="QEy-dA-xfg" firstAttribute="leading" secondItem="pAB-lo-oeN" secondAttribute="leading" constant="5" id="kuh-sm-Jw9"/>
                             <constraint firstItem="QEy-dA-xfg" firstAttribute="top" secondItem="pAB-lo-oeN" secondAttribute="top" constant="5" id="mRC-8B-3jn"/>
+                            <constraint firstItem="pAB-lo-oeN" firstAttribute="trailing" secondItem="QEy-dA-xfg" secondAttribute="trailing" constant="5" id="xKa-J2-bOh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pAB-lo-oeN"/>
                     </view>
@@ -445,27 +446,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LXm-qr-GoR">
-                                <rect key="frame" x="5" y="69" width="349" height="593"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LXm-qr-GoR">
+                                <rect key="frame" x="5" y="25" width="365" height="637"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ajy-do-WTx">
-                                        <rect key="frame" x="0.0" y="0.0" width="349" height="296.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="312.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="E8z-xG-VI6">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="247"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="E8z-xG-VI6">
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="260.5"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-Lt-cZP">
-                                                <rect key="frame" x="0.0" y="247" width="349" height="49.5"/>
+                                                <rect key="frame" x="0.0" y="260.5" width="365" height="52"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o56-ic-5d0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="129.5" height="49.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="52"/>
                                                         <state key="normal" title="Scatta foto"/>
                                                         <connections>
                                                             <action selector="scatta:" destination="YAH-ok-TSx" eventType="touchUpInside" id="yYS-UI-RlE"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81l-dZ-DZt">
-                                                        <rect key="frame" x="219.5" y="0.0" width="129.5" height="49.5"/>
+                                                        <rect key="frame" x="227.5" y="0.0" width="137.5" height="52"/>
                                                         <state key="normal" title="Scegli foto"/>
                                                         <connections>
                                                             <action selector="inseriscifoto:" destination="YAH-ok-TSx" eventType="touchUpInside" id="tqL-rs-6Ia"/>
@@ -475,29 +476,29 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="H0V-3E-THM">
-                                        <rect key="frame" x="0.0" y="296.5" width="349" height="296.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="H0V-3E-THM">
+                                        <rect key="frame" x="0.0" y="324.5" width="365" height="312.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Aggiungi Titolo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-F1-ski">
-                                                <rect key="frame" x="0.0" y="0.0" width="349" height="78.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="365" height="88.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inserisci descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tn-lf-hVx">
-                                                <rect key="frame" x="0.0" y="80.5" width="349" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="92.5" width="365" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="71u-CH-ATQ">
-                                                <rect key="frame" x="0.0" y="103" width="349" height="161.5"/>
+                                                <rect key="frame" x="0.0" y="117" width="365" height="161.5"/>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tng-in-iEy">
-                                                <rect key="frame" x="0.0" y="266.5" width="349" height="30"/>
+                                                <rect key="frame" x="0.0" y="282.5" width="365" height="30"/>
                                                 <state key="normal" title="SALVA"/>
                                                 <connections>
                                                     <action selector="Salva:" destination="YAH-ok-TSx" eventType="touchUpInside" id="ssu-ky-TS2"/>
@@ -512,6 +513,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NkH-6i-ATS" firstAttribute="trailing" secondItem="LXm-qr-GoR" secondAttribute="trailing" constant="5" id="2TX-aN-ReY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="LXm-qr-GoR" secondAttribute="bottom" constant="5" id="bpL-bw-uLl"/>
                             <constraint firstItem="LXm-qr-GoR" firstAttribute="leading" secondItem="NkH-6i-ATS" secondAttribute="leading" constant="5" id="hGW-bF-kQt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LXm-qr-GoR" secondAttribute="trailing" constant="5" id="x4Y-Me-A7Q"/>
@@ -535,11 +537,104 @@
         <image name="back" width="245" height="640"/>
         <image name="go-1" width="128" height="128"/>
         <image name="iconaMappa" width="178" height="169"/>
+        <image name="imageView:te1-Ir-aUU:image" width="245" height="640">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGU1RYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEQcI
+ExQZHh8lJiwvOUFFSU1QVSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NW
+TlNSZXBzV05TQ29sb3KAAoAQEiTAAACAA4AKWnsyNDUsIDY0MH3SFQoWGFpOUy5vYmplY3RzoReABIAJ
+0hUKGhiiGxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8v
+QXBwbGljYXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJL
+aXQuZnJhbWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3Nu
+YW1lWCRjbGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9UwMTIzCjQ1Njc4V05T
+V2hpdGVcTlNDb21wb25lbnRzXE5TQ29sb3JTcGFjZV8QEk5TQ3VzdG9tQ29sb3JTcGFjZUQwIDAAQzAg
+MBADgAuAD9Q6OzwKPT4/QFROU0lEVU5TSUNDV05TTW9kZWwQCYAMEACADtJCCkNEV05TLmRhdGFPERFo
+AAARaGFwcGwCAAAAbW50ckdSQVlYWVogB9wACAAXAA8ALgAPYWNzcEFQUEwAAAAAbm9uZQAAAAAAAAAA
+AAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAFZGVzYwAAAMAAAAB5ZHNjbQAAATwAAAfoY3BydAAACSQAAAAjd3RwdAAACUgAAAAU
+a1RSQwAACVwAAAgMZGVzYwAAAAAAAAAfR2VuZXJpYyBHcmF5IEdhbW1hIDIuMiBQcm9maWxlAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAG1sdWMAAAAAAAAAHwAAAAxza1NLAAAALgAAAYRkYURLAAAAOAAAAbJjYUVT
+AAAAOAAAAep2aVZOAAAAQAAAAiJwdEJSAAAASgAAAmJ1a1VBAAAALAAAAqxmckZVAAAAPgAAAthodUhV
+AAAANAAAAxZ6aFRXAAAAHgAAA0puYk5PAAAAOgAAA2hjc0NaAAAAKAAAA6JoZUlMAAAAJAAAA8ppdElU
+AAAATgAAA+5yb1JPAAAAKgAABDxkZURFAAAATgAABGZrb0tSAAAAIgAABLRzdlNFAAAAOAAAAbJ6aENO
+AAAAHgAABNZqYUpQAAAAJgAABPRlbEdSAAAAKgAABRpwdFBPAAAAUgAABURubE5MAAAAQAAABZZlc0VT
+AAAATAAABdZ0aFRIAAAAMgAABiJ0clRSAAAAJAAABlRmaUZJAAAARgAABnhockhSAAAAPgAABr5wbFBM
+AAAASgAABvxydVJVAAAAOgAAB0ZlblVTAAAAPAAAB4BhckVHAAAALAAAB7wAVgFhAGUAbwBiAGUAYwBu
+AOEAIABzAGkAdgDhACAAZwBhAG0AYQAgADIALAAyAEcAZQBuAGUAcgBpAHMAawAgAGcAcgDlACAAMgAs
+ADIAIABnAGEAbQBtAGEAcAByAG8AZgBpAGwARwBhAG0AbQBhACAAZABlACAAZwByAGkAcwBvAHMAIABn
+AGUAbgDoAHIAaQBjAGEAIAAyAC4AMgBDHqUAdQAgAGgA7ABuAGgAIABNAOAAdQAgAHgA4QBtACAAQwBo
+AHUAbgBnACAARwBhAG0AbQBhACAAMgAuADIAUABlAHIAZgBpAGwAIABHAGUAbgDpAHIAaQBjAG8AIABk
+AGEAIABHAGEAbQBhACAAZABlACAAQwBpAG4AegBhAHMAIAAyACwAMgQXBDAEMwQwBDsETAQ9BDAAIABH
+AHIAYQB5AC0EMwQwBDwEMAAgADIALgAyAFAAcgBvAGYAaQBsACAAZwDpAG4A6QByAGkAcQB1AGUAIABn
+AHIAaQBzACAAZwBhAG0AbQBhACAAMgAsADIAwQBsAHQAYQBsAOEAbgBvAHMAIABzAHoA/AByAGsAZQAg
+AGcAYQBtAG0AYQAgADIALgAykBp1KHBwlo5RSV6mACAAMgAuADIAIIJyX2ljz4/wAEcAZQBuAGUAcgBp
+AHMAawAgAGcAcgDlACAAZwBhAG0AbQBhACAAMgAsADIALQBwAHIAbwBmAGkAbABPAGIAZQBjAG4A4QAg
+AWEAZQBkAOEAIABnAGEAbQBhACAAMgAuADIF0gXQBd4F1AAgBdAF5AXVBegAIAXbBdwF3AXZACAAMgAu
+ADIAUAByAG8AZgBpAGwAbwAgAGcAcgBpAGcAaQBvACAAZwBlAG4AZQByAGkAYwBvACAAZABlAGwAbABh
+ACAAZwBhAG0AbQBhACAAMgAsADIARwBhAG0AYQAgAGcAcgBpACAAZwBlAG4AZQByAGkAYwEDACAAMgAs
+ADIAQQBsAGwAZwBlAG0AZQBpAG4AZQBzACAARwByAGEAdQBzAHQAdQBmAGUAbgAtAFAAcgBvAGYAaQBs
+ACAARwBhAG0AbQBhACAAMgAsADLHfLwYACDWjMDJACCsELnIACAAMgAuADIAINUEuFzTDMd8Zm6QGnBw
+XqZ8+2VwACAAMgAuADIAIGPPj/Blh072TgCCLDCwMOwwpDCsMPMw3gAgADIALgAyACAw1zDtMNUwoTCk
+MOsDkwO1A70DuQO6A8wAIAOTA7oDwQO5ACADkwOsA7wDvAOxACAAMgAuADIAUABlAHIAZgBpAGwAIABn
+AGUAbgDpAHIAaQBjAG8AIABkAGUAIABjAGkAbgB6AGUAbgB0AG8AcwAgAGQAYQAgAEcAYQBtAG0AYQAg
+ADIALAAyAEEAbABnAGUAbQBlAGUAbgAgAGcAcgBpAGoAcwAgAGcAYQBtAG0AYQAgADIALAAyAC0AcABy
+AG8AZgBpAGUAbABQAGUAcgBmAGkAbAAgAGcAZQBuAOkAcgBpAGMAbwAgAGQAZQAgAGcAYQBtAG0AYQAg
+AGQAZQAgAGcAcgBpAHMAZQBzACAAMgAsADIOIw4xDgcOKg41DkEOAQ4hDiEOMg5ADgEOIw4iDkwOFw4x
+DkgOJw5EDhsAIAAyAC4AMgBHAGUAbgBlAGwAIABHAHIAaQAgAEcAYQBtAGEAIAAyACwAMgBZAGwAZQBp
+AG4AZQBuACAAaABhAHIAbQBhAGEAbgAgAGcAYQBtAG0AYQAgADIALAAyACAALQBwAHIAbwBmAGkAaQBs
+AGkARwBlAG4AZQByAGkBDQBrAGkAIABHAHIAYQB5ACAARwBhAG0AbQBhACAAMgAuADIAIABwAHIAbwBm
+AGkAbABVAG4AaQB3AGUAcgBzAGEAbABuAHkAIABwAHIAbwBmAGkAbAAgAHMAegBhAHIAbwFbAGMAaQAg
+AGcAYQBtAG0AYQAgADIALAAyBB4EMQRJBDAETwAgBEEENQRABDAETwAgBDMEMAQ8BDwEMAAgADIALAAy
+AC0EPwRABD4ERAQ4BDsETABHAGUAbgBlAHIAaQBjACAARwByAGEAeQAgAEcAYQBtAG0AYQAgADIALgAy
+ACAAUAByAG8AZgBpAGwAZQY6BicGRQYnACAAMgAuADIAIAZEBkgGRgAgBjEGRQYnBi8GSgAgBjkGJwZF
+dGV4dAAAAABDb3B5cmlnaHQgQXBwbGUgSW5jLiwgMjAxMgAAWFlaIAAAAAAAAPNRAAEAAAABFsxjdXJ2
+AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8
+AIEAhgCLAJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZ
+AR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHy
+AfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMW
+AyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRjBHEEfgSM
+BJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZ
+BmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiC
+CJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK8wsL
+CyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN3g34
+DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14Peg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFP
+EW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUS
+FTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlF
+GWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3s
+HhYeQB5qHpQevh7pHxMfPh9pH5Qfvx/qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i3SMK
+IzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8ocSii
+KNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63
+Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1EzVN
+NYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07azuqO+g8Jzxl
+PKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9hP6I/4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQD
+REdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwq
+THJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1Tb
+VShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4a
+XmxevV8PX2Ffs2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1nk2fp
+aD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFdsr20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx8HJL
+cqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1B
+faF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASIaYjO
+iTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOTTZO2lCCUipT0
+lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2
+oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8W
+r4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70V
+vY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4yrfLNsu2
+zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j/SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHadtr7
+24DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl
+63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65/t3
+/Af8mP0p/br+S/7c/23//4AN0icoRkddTlNNdXRhYmxlRGF0YaNGSCtWTlNEYXRh0icoSktcTlNDb2xv
+clNwYWNlokwrXE5TQ29sb3JTcGFjZdInKE5PV05TQ29sb3KiTivSJyhRUldOU0ltYWdlolErXxAPTlNL
+ZXllZEFyY2hpdmVy0VVWVHJvb3SAAQAIABEAGgAjAC0AMgA3AEsAUQBcAGMAagB3AH4AhgCIAIoAjwCR
+AJMAngCjAK4AsACyALQAuQC8AL4AwADCAMQAywDTAN8A4QDjAOUBWwFgAWsBdAF6AX0BhgGLAZMBlgGh
+AakBtgHDAdgB3QHhAeMB5QHnAfAB9QH7AgMCBQIHAgkCCwIQAhgThBOGE4sTmROdE6QTqRO2E7kTxhPL
+E9MT1hPbE+MT5hP4E/sUAAAAAAAAAAIBAAAAAAAAAFcAAAAAAAAAAAAAAAAAABQCA
+</mutableData>
+        </image>
         <image name="map" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7M6-JZ-ATP"/>
         <segue reference="0rf-8M-n7g"/>
-        <segue reference="qsq-wT-enz"/>
+        <segue reference="3WV-7I-4LP"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -256,7 +256,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             return CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         }
         let archived = NSKeyedArchiver.archivedData(withRootObject: locations)
-        
+        if let posizIni = posizioneIniziale{
         let number = counts[posizioneIniziale] ?? 0
 //        if let num = number{
         
@@ -270,6 +270,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             let encodedData =
                 NSKeyedArchiver.archivedData(withRootObject: routes)
             UserDefaults.standard.set(encodedData, forKey: "routes")
+        }
 //        }
 //        else{
 //             keyItinerario = "\(posizioneIniziale!).0"
