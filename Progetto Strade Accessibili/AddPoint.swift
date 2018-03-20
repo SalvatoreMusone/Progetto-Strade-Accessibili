@@ -22,6 +22,8 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
+       self.hideKeyboardWhenTappedAround()
+        
         if let loc = locationManager.location{
             location = loc
             coordinate = loc.coordinate
@@ -87,7 +89,25 @@ class AddPoint: UIViewController, UIImagePickerControllerDelegate,UINavigationCo
         
         
     }
+   
+    @IBAction func nascondiTastiera() {
+        tnewpoint.resignFirstResponder()
+        descrizione.resignFirstResponder()
+       
+    }
+    
+    
     
 }
 
-
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

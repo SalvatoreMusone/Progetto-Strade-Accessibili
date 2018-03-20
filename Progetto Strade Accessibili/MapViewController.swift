@@ -169,8 +169,16 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             
         } else {
             if let placemarks = placemarks, let placemark = placemarks.first {
-                posizioneIniziale = placemark.locality!
-                indirizzoIniziale = placemark.thoroughfare!
+               
+                if let posizIniz = placemark.locality{
+                    posizioneIniziale = posizIniz
+                }
+                
+                if let indirIniz = placemark.thoroughfare{
+                    indirizzoIniziale = indirIniz
+                    
+                }
+                
                 // locality = placemark.locality!
                 //print(locality)
             } else {
@@ -186,8 +194,16 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             
         } else {
             if let placemarks = placemarks, let placemark = placemarks.first {
-                posizioneFinale = placemark.locality!
-                indirizzoFinale = placemark.thoroughfare!
+                
+                if let posizFin = placemark.locality{
+                    posizioneFinale = posizFin
+                }
+               
+               
+                if let indirFin = placemark.thoroughfare{
+                    indirizzoFinale = indirFin
+                }
+                
                 // locality = placemark.locality!
                 //print(locality)
                  storeCoordinates(coordinateItinerario)

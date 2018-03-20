@@ -125,8 +125,7 @@ class Homepage: UIViewController, CLLocationManagerDelegate {
             if let placemarks = placemarks, let placemark = placemarks.first {
                 welcome.text = "Welcome to:  \(placemark.locality!), \(placemark.country!)"
                 posizioneWelcome = "Welcome to:  \(placemark.locality!), \(placemark.country!)"
-                // locality = placemark.locality!
-                //print(locality)
+                
             } else {
                 welcome.text = "Indirizzo non disponibile "
                 posizioneWelcome = "Indirizzo non disponibile "
