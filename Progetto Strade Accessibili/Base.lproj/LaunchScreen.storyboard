@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconayeah!" translatesAutoresizingMaskIntoConstraints="NO" id="LaS-Bc-8Mw">
-                                <rect key="frame" x="47" y="219" width="280" height="228"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconay" translatesAutoresizingMaskIntoConstraints="NO" id="q1d-RP-HRR">
+                                <rect key="frame" x="49" y="200" width="276" height="266"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -33,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconayeah!" width="415" height="400"/>
+        <image name="iconay" width="400" height="400"/>
     </resources>
 </document>
